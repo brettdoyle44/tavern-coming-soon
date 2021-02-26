@@ -26,13 +26,16 @@ const Header = () => {
 
   const [email, setEmail] = useState("")
   const [notValid, setNotValid] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   async function handleSubmit(event) {
     event.preventDefault()
+    setLoading(true)
     try {
       if (validateEmail(email)) {
         await writeUserData(uuidv1(), email)
         setEmail("")
+        setLoading(false)
         navigate("/confirm")
       }
       setEmail("")
@@ -88,7 +91,9 @@ const Header = () => {
                   placeholder="Please enter valid email"
                 />
               )}
-              <HeaderButton>Early access</HeaderButton>
+              <HeaderButton>
+                {loading ? "Submitting..." : "Early access"}
+              </HeaderButton>
             </HeaderForm>
           </HeaderTextGroup>
           <ImageWrapper>

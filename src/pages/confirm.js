@@ -40,6 +40,7 @@ const HeaderButton = styled.button`
 
 const HeaderText = styled.p`
   padding: 0px 25px;
+  font-family: "HK Grotesk Normal";
   @media (min-width: 40em) {
     max-width: 40em;
     text-align: center;
@@ -52,13 +53,13 @@ const ConfirmPage = () => (
     <SEO title="Thank you for signing up for Tavern" />
 
     <div className={"confirm-header home"} id="header">
-      <h1>Thanks for signing up!</h1>
       <HeaderText>
+        <h1>Thanks for signing up!</h1>
         Feel free to help us spread the word by sharing on social media.
       </HeaderText>
       <ButtonWrapper>
         <HeaderButton>
-          <Link style={{ color: "#fff" }} to="/">
+          <Link style={{ color: "#fff", textDecoration: "none" }} to="/">
             Return to Homepage
           </Link>
         </HeaderButton>
