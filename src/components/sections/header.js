@@ -244,7 +244,7 @@ const StyledImage = styled(Img)`
     width: 400px;
   }
   @media (max-width: ${(props) => props.theme.screen.sm}) {
-    width: 400px;
+    width: 350px;
   }
 `
 
