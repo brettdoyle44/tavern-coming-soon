@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter SaaS Marketing`,
-    description: `A simple one page marketing starter for saas companies.`,
-    author: `Keegan Burkett`,
+    title: `Drop-in Audio, built for work`,
+    description: `Hang out with co-workers the way it's meant to be, laid back and simple.`,
+    author: `Tavern`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,6 +33,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyB7z0vUXZG7gI4vP0ck8aoD6dVWe0HNdKI",
+          authDomain: "tavern-coming-soon.firebaseapp.com",
+          databaseURL: "https://tavern-coming-soon-default-rtdb.firebaseio.com",
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -41,7 +51,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/tavern-icon.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
