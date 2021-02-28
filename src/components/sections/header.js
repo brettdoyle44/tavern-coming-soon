@@ -74,15 +74,15 @@ const Header = () => {
               We're all tired of endless video meetings. Hang out with
               co-workers the way it's meant to be, laid back and simple.
               <br />
-              <br /> Sign up for early access and you'll be the first to know
-              when we're live.
+              <br /> Sign up with your work email for early access, and you'll
+              be the first to know when we're live.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
               {!notValid ? (
                 <HeaderInput
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  placeholder="Your email"
+                  placeholder="Work email here..."
                 />
               ) : (
                 <NotValidHeaderInput
